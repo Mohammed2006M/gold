@@ -67,6 +67,15 @@ li {
     height: 85px;
     position: relative;
 }
+@media (max-width: 767px) {
+    .header .container {
+        height: 80px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+}
 .header .container ul {
     display: flex;
 }
@@ -100,12 +109,29 @@ li {
 }
 .header .container .logo {
     position: absolute;
-    left: 48%;
+    left: 50%;
+    transform: translateX(-48%);
     bottom: -6px;
     color: yellow;
     font-size: 18px;
     font-weight: bold;
     margin: 13px 7px;
+}
+@media (max-width: 767px) {
+    .header .container ul li:not(:first-child) {
+        display: none;
+    }
+}
+@media (max-width: 767px) {
+    .header .container .logo{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+@media (max-width: 767px) {
+    .header .container ul li .momo {
+        top: 0;
+    }
 }
 .header .container .page {
     color: white;
